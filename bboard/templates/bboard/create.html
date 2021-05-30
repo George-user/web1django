@@ -1,0 +1,14 @@
+{% extends "bboard/basic.html" %}
+
+{% block title %}{{ current_rubric.name }}Добавления {% endblock %}
+
+{% block content %}
+
+     <h2>Добавление объявления</h2>
+   <form method="post">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <input type="submit" value="Добавить">
+   </form>
+
+{% endblock %}
